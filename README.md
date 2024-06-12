@@ -179,7 +179,7 @@ use Twodareis2do\ScrapeNewspaperPlaywright\NewspaperPlaywrightWrapper;
 
 $parser = new NewspaperPlaywrightWrapper();
 
-$parser->scrape('your url', false, null);
+$parser->scrape('your url', false);
 ```
 
 ## Read more
