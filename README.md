@@ -10,6 +10,9 @@ The combination of using Newspaper3/4k script with Playwright allows for the
 automated handling of cookies and other actions required by cookie compliance
 on a site by site basis.
 
+Now you can also pass a third parameter to the scrape method. This allows you
+to override the included ArticleScraping.py on a site by site basis.
+
 ## Install Necessary Packages
 
 ```
@@ -176,7 +179,7 @@ use Twodareis2do\ScrapeNewspaperPlaywright\NewspaperPlaywrightWrapper;
 
 $parser = new NewspaperPlaywrightWrapper();
 
-$parser->scrape('your url');
+$parser->scrape('your url', false, null);
 ```
 
 ## Read more
