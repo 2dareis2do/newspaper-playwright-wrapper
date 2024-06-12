@@ -24,20 +24,8 @@ def accept_cookies_and_fetch_article(url):
         page = context.new_page()
 
         page.goto(url)
-        
+
         # Automating iframe button click
-        
-        # Todo: 
-        # Abstract selector params - make more dynamic? 
-        # 1. locator - (boolean) iframe 
-        # 2. locator selector - (string) may change.
-        # 3. get label - (string) Options for Essential or All etc.
-        # 4. Option - (boolean) skip playwright
-        
-        # Alternative Todo:
-        # We can simply add support for passing cwd path. 
-        # This would make this whole script overrideable
-        
         page.frame_locator("iframe[title=\"SP Consent Message\"]").get_by_label("Essential cookies only").click()
 
         content = page.content()
