@@ -36,18 +36,18 @@ def accept_cookies_and_fetch_article(url):
 
     # Using Newspaper4k to parse the page content
     article = newspaper.article(url, input_html=content, language='en')
+    article.parse() #Parse the article
+    article.nlp()#  Keyword extraction wrapper
 
     return article
 
 article = accept_cookies_and_fetch_article(url)
 
 # article.download() #Downloads the link’s HTML content
-article.parse() #Parse the article
 # 1 time download of the sentence tokenizer
 # perhaps better to run from command line as we don't need to install each time?
 #nltk.download('all') 
 #nltk.download('punkt')
-article.nlp()#  Keyword extraction wrapper
 
 sys.stdout = sys.__stdout__
 
