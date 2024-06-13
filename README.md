@@ -18,7 +18,8 @@ to override the included ArticleScraping.py on a site by site basis.
 ```
 pip install newspaper4k
 pip install playwright
-playwright install
+python -m playwright install
+python -m playwright install-deps
 ```
 
 ## Features
