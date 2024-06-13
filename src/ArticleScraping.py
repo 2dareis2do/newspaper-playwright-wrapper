@@ -3,6 +3,7 @@
 
 import json, sys, os
 import nltk
+import newspaper
 from newspaper import Article
 from datetime import datetime
 import lxml, lxml.html
@@ -34,7 +35,7 @@ def accept_cookies_and_fetch_article(url):
         browser.close()
 
     # Using Newspaper4k to parse the page content
-    article = Article(url, input_html=content, language='en')
+    article = newspaper.article(url, input_html=content, language='en')
 
     return article
 
